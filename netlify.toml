@@ -1,8 +1,8 @@
 # netlify.toml
 
 [build]
-  command = "npm install" # Only install dependencies, let Netlify handle TS build
-  publish = "dist" # Still useful to define a publish dir, even if unused
+  command = "npm install"
+  # publish = "dist" # Removed publish directory setting
   functions = "netlify/functions"
 
 [functions]
@@ -15,3 +15,4 @@
 
 # [build.environment]
 #   NODE_VERSION = "18"
+
