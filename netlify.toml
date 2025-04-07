@@ -1,0 +1,17 @@
+# netlify.toml
+
+[build]
+  command = "npm install" # Only install dependencies, let Netlify handle TS build
+  publish = "dist" # Still useful to define a publish dir, even if unused
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# [build.environment]
+#   NODE_VERSION = "18"
