@@ -1,4 +1,4 @@
-import { handle } from '@hono/node-server/netlify'
-import app from '../../main' // Adjust path relative to the compiled JS location (dist)
+import { handle } from '@hono/node-server'
+import app from '../../main'
 
 export const handler = handle(app)
